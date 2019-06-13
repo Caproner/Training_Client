@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accepted Up! - GZHU Online Judge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 目前使用的是网络提供的bootstrap和jquery，等到时候放到服务器上需要换成本地的 -->
+  <link rel="stylesheet" href="../../bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="../../jquery/3.4.1/jquery.min.js"></script>
+  <script src="../../bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- 这部分CSS样式到时候还是用一个CSS文件集体包装起来好，不过现在只是做个大概界面，就不管那么多了 -->
+  <style>
+  	body
+  	{
+  		padding-top: 70px;
+  		padding-bottom: 30px;
+  	}
+  </style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          	</button>
+	          	<!-- 目前使用的暂时是本地的绝对路径，等到时候替换即可。下同 -->
+	          	<!-- 有些href还没填写，之后会补上 -->
+				<a class="navbar-brand" href="../index.html">Accepted Up</a>
+			</div>
+
+			<div id="navbar" class="navbar-collapse collapse">
+
+				<ul class="nav navbar-nav">
+
+					<li><a href="../index.html">Home</a></li>
+
+					<li><a href="../Problemset/index.html">Problemset</a></li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contest<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="">ACup Round</a></li>
+							<li><a href="">Standard Contest</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ranklist<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="../Ranklist/SolvedRanklist.html">Solved Ranklist</a></li>
+							<li><a href="../Ranklist/RatingRanklist.html">Rating Ranklist</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exam<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="">Free Exam</a></li>
+							<li><a href="">Special Exam</a></li>
+						</ul>
+					</li>
+
+					<li><a href="">Status</a></li>
+
+					<li><a href="">Discuss</a></li>
+
+					<li><a href="">Help</a></li>
+
+				</ul>
+
+				<!-- 如果需要看登录后的界面请自行切换注释。下同 -->
+				<!-- 到时候切换登录前后的显示也需要后端完成 -->
+
+				<!-- if not login -->
+
+				<!--
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">Login</a></li>
+					<li><a href="">Register</a></li>
+				</ul>
+
+				-->
+
+				<!-- else -->
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">[Username]</a></li>
+					<li><a href="">Logout</a></li>
+				</ul>
+
+			</div>
+
+		</div>
+	</nav>
+
+	<div class="container theme-showcase" role="main">
+
+		<div class="row">
+			
+			<div class="col-md-3">
+				<ul class="list-group">
+					<a href="" class="list-group-item active">Local</a>
+					<a href="" class="list-group-item">HDU</a>
+					<a href="" class="list-group-item">POJ</a>
+					<a href="" class="list-group-item">Codeforces</a>
+				</ul>
+				<div class="page-header">
+					<h3>Daily Mission</h3>
+				</div>
+				
+				<!-- if not login -->
+
+				<!--
+
+				<img src="../src/img/Transparent_Akkarin.jpg" height="250" width="250">
+
+				-->
+
+				<!-- else -->
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Problem</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>HDU 1000</td>
+							<td><button type="button" class="btn btn-sm btn-info">Unsolved</button></td>
+						</tr>
+						<tr>
+							<td>Local 1000</td>
+							<td><button type="button" class="btn btn-sm btn-info">Unsolved</button></td>
+						</tr>
+						<tr>
+							<td>POJ 1000</td>
+							<td><button type="button" class="btn btn-sm btn-success">Solved</button></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+
+			<div class="col-md-9">
+				
+				<div class="row">
+					<div class="col-md-6">
+						<ul class="pagination">
+						    <li class="disabled"><a href="">Previous</a></li>
+						    <li class="active"><a href="">1</a></li>
+						    <li><a href="">2</a></li>
+						    <li><a href="">3</a></li>
+						    <li><a href="">4</a></li>
+						    <li><a href="">5</a></li>
+						    <li class="disabled"><a href="">...</a></li>
+						    <li><a href="">Next</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul class="input-group" style="padding-top: 20px;">
+							<input type="text" class="form-control">
+		                    <span class="input-group-btn">
+		                        <button class="btn btn-default" type="button">Fiter</button>
+		                        <button class="btn btn-default" type="button">Reset</button>
+		                    </span>
+						</ul>
+					</div>
+				</div>
+
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th width="10%" class="text-center">ID</th>
+							<th width="50%" class="text-center">Name</th>
+							<th width="20%" class="text-center">Solved</th>
+							<th width="20%" class="text-center">Difficulty</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>	<!-- 如果是已登录且已AC则添加success的class;如果是有提交但没有AC则为danger -->
+							<td class="text-center">1000</td>
+							<td><a href="../Problemset\1000\index.html">A+B Problem</a></td>
+							<td class="text-center"><img src="../src/img/user.png" height="20" width="20"> x 25678</td>
+							<td class="text-center">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_gray.png">
+								<img src="../src/img/star_gray.png">
+								<img src="../src/img/star_gray.png">
+								<img src="../src/img/star_gray.png">
+							</td>
+						</tr>
+						<tr class="success">
+							<td class="text-center">1001</td>
+							<td>畅通工程</td>
+							<td class="text-center"><img src="../src/img/user.png" height="20" width="20"> x 7562</td>
+							<td class="text-center">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_gray.png">
+								<img src="../src/img/star_gray.png">
+								<img src="../src/img/star_gray.png">
+							</td>
+						</tr>
+						<tr class="danger">
+							<td class="text-center">1002</td>
+							<td>Mega Blast</td>
+							<td class="text-center"><img src="../src/img/user.png" height="20" width="20"> x 234</td>
+							<td class="text-center">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_gray.png">
+							</td>
+						</tr>
+						<tr>
+							<td class="text-center">1003</td>
+							<td>A+B Problem II</td>
+							<td class="text-center"><img src="../src/img/user.png" height="20" width="20"> x 1242</td>
+							<td class="text-center">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_gray.png">
+								<img src="../src/img/star_gray.png">
+							</td>
+						</tr>
+						<tr>
+							<td class="text-center">1004</td>
+							<td>随便</td>
+							<td class="text-center"><img src="../src/img/user.png" height="20" width="20"> x 0</td>
+							<td class="text-center">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_yellow.png">
+								<img src="../src/img/star_yellow.png">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="text-center">
+				<hr>
+				<p>Template for <a href="http://getbootstrap.com">Bootstrap</a>, by momoto, HunterYH, HuangShaofeng, and Caproner.</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

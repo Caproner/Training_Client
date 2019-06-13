@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accepted Up! - GZHU Online Judge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 目前使用的是网络提供的bootstrap和jquery，等到时候放到服务器上需要换成本地的 -->
+  <link rel="stylesheet" href="../../bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="../../jquery/3.4.1/jquery.min.js"></script>
+  <script src="../../bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- 这部分CSS样式到时候还是用一个CSS文件集体包装起来好，不过现在只是做个大概界面，就不管那么多了 -->
+  <style>
+  	body
+  	{
+  		padding-top: 50px;
+  		padding-bottom: 30px;
+  	}
+  </style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          	</button>
+	          	<!-- 目前使用的暂时是本地的绝对路径，等到时候替换即可。下同 -->
+	          	<!-- 有些href还没填写，之后会补上 -->
+				<a class="navbar-brand" href="../index.html">Accepted Up</a>
+			</div>
+
+			<div id="navbar" class="navbar-collapse collapse">
+
+				<ul class="nav navbar-nav">
+
+					<li><a href="../index.html">Home</a></li>
+
+					<li><a href="../Problemset/index.html">Problemset</a></li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contest<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="">ACup Round</a></li>
+							<li><a href="">Standard Contest</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ranklist<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="../Ranklist/SolvedRanklist.html">Solved Ranklist</a></li>
+							<li><a href="../Ranklist/RatingRanklist.html">Rating Ranklist</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exam<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="">Free Exam</a></li>
+							<li><a href="">Special Exam</a></li>
+						</ul>
+					</li>
+
+					<li><a href="">Status</a></li>
+
+					<li><a href="">Discuss</a></li>
+
+					<li><a href="">Help</a></li>
+
+				</ul>
+
+				<!-- 如果需要看登录后的界面请自行切换注释。下同 -->
+				<!-- 到时候切换登录前后的显示也需要后端完成 -->
+
+				<!-- if not login -->
+
+				<!--
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">Login</a></li>
+					<li><a href="">Register</a></li>
+				</ul>
+
+				-->
+
+				<!-- else -->
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">[Username]</a></li>
+					<li><a href="">Logout</a></li>
+				</ul>
+
+			</div>
+
+		</div>
+	</nav>
+
+	<div class="container theme-showcase" role="main">
+		
+		<div class="page-header">
+			<h1>Rating Ranklist</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<ul class="pagination">
+					<li class="disabled"><a href="">Previous</a></li>
+					<li class="active"><a href="">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li class="disabled"><a href="">...</a></li>
+					<li><a href="">Next</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<ul class="input-group" style="padding-top: 20px;">
+					<input type="text" class="form-control">
+		            <span class="input-group-btn">
+		                <button class="btn btn-default" type="button">Fiter</button>
+		                <button class="btn btn-default" type="button">Reset</button>
+		            </span>
+				</ul>
+			</div>
+		</div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th class="text-center">#</th>
+					<th class="text-center">Handle</th>
+					<th class="text-center">Motto</th>
+					<th class="text-center">Rating</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="text-center">1</td>
+					<td class="text-center"><span style="font-weight:bold;color:black">t</span><span style="font-weight:bold;color:red">ourist</span></td>
+					<td class="text-center">Algorithm is so interesting.</td>
+					<td class="text-center">3496</td>
+				</tr>
+				<tr>
+					<td class="text-center">2</td>
+					<td class="text-center"><span style="font-weight:bold;color:black">P</span><span style="font-weight:bold;color:red">etr</span></td>
+					<td class="text-center"></td>
+					<td class="text-center">3298</td>
+				</tr>
+				<tr>
+					<td class="text-center">3</td>
+					<td class="text-center"><span style="font-weight:bold;color:black">O</span><span style="font-weight:bold;color:red">O0OOO00</span></td>
+					<td class="text-center">Well...</td>
+					<td class="text-center">3294</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="text-center">
+				<hr>
+				<p>Template for <a href="http://getbootstrap.com">Bootstrap</a>, by momoto, HunterYH, HuangShaofeng, and Caproner.</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

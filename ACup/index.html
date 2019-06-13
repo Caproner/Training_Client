@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accepted Up! - GZHU Online Judge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 目前使用的是网络提供的bootstrap和jquery，等到时候放到服务器上需要换成本地的 -->
+  <link rel="stylesheet" href="../bootstrap/3.3.7/css/bootstrap.min.css">  
+  <script src="../jquery/3.4.1/jquery.min.js"></script>
+  <script src="../bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- 这部分CSS样式到时候还是用一个CSS文件集体包装起来好，不过现在只是做个大概界面，就不管那么多了 -->
+  <style>
+  	body
+  	{
+  		padding-top: 70px;
+  		padding-bottom: 30px;
+  	}
+  </style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          	</button>
+	          	<!-- 目前使用的暂时是本地的绝对路径，等到时候替换即可。下同 -->
+	          	<!-- 有些href还没填写，之后会补上 -->
+				<a class="navbar-brand" href="index.html">Accepted Up</a>
+			</div>
+
+			<div id="navbar" class="navbar-collapse collapse">
+
+				<ul class="nav navbar-nav">
+
+					<li><a href="index.html">Home</a></li>
+
+					<li><a href="Problemset/index.html">Problemset</a></li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contest<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="">ACup Round</a></li>
+							<li><a href="">Standard Contest</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ranklist<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="Ranklist/SolvedRanklist.html">Solved Ranklist</a></li>
+							<li><a href="Ranklist/RatingRanklist.html">Rating Ranklist</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exam<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="">Free Exam</a></li>
+							<li><a href="">Special Exam</a></li>
+						</ul>
+					</li>
+
+					<li><a href="">Status</a></li>
+
+					<li><a href="">Discuss</a></li>
+
+					<li><a href="">Help</a></li>
+
+				</ul>
+
+				<!-- 如果需要看登录后的界面请自行切换注释。下同 -->
+				<!-- 到时候切换登录前后的显示也需要后端完成 -->
+
+				<!-- if not login -->
+				
+				<!--
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">Login</a></li>
+					<li><a href="">Register</a></li>
+				</ul>
+
+				-->
+
+				<!-- else -->
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">[Username]</a></li>
+					<li><a href="">Logout</a></li>
+				</ul>
+
+			</div>
+
+		</div>
+	</nav>
+
+	<div class="container theme-showcase" role="main">
+
+		<div class="jumbotron">
+			<h1>Welcome to Accepted Up!</h1>
+			<!-- 这段目前不知道要写什么文本，就随便写了点东西 -->
+			<p>Accepted Up is an online judge from Guangzhou University. Its currently under development so it has no actual function. Namely, You can only see these simple interfaces.</p>
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-8">
+
+				<div class="page-header">
+					<h1>Daily Mission</h1>
+				</div>
+
+				<!-- if not login -->
+
+				<!--
+
+				<img src="src/img/Transparent_Akkarin.jpg">
+				<span style="font-size: 35px">Please login first.</span>
+
+				-->
+				
+				<!-- else -->
+				
+				<!-- 此处的日常任务需要从数据库中根据当前用户导入数据，需要后端来处理 -->
+				<!-- 当前目的只是为了显示效果故直接写上数据 -->
+
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Unsolved</h3>
+					</div>
+					<div class="panel-body">
+						<p>
+							<span style="font-size: 25px">HDU 1000: A + B Problem</span>
+							<button type="button" class="btn btn-lg btn-primary pull-right">Go</button>
+						</p>
+					</div>
+				</div>
+				
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Unsolved</h3>
+					</div>
+					<div class="panel-body">
+						<p>
+							<span style="font-size: 25px">Local 1000: A+B Problem</span>
+							<button type="button" class="btn btn-lg btn-primary pull-right">Go</button>
+						</p>
+					</div>
+				</div>
+
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title">Solved</h3>
+					</div>
+					<div class="panel-body">
+						<p>
+							<span style="font-size: 25px">POJ 1000: A+B Problem</span>
+							<button type="button" class="btn btn-lg btn-success pull-right">Go</button>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-4">
+				<div class="page-header">
+					<h1>Top Rated</h1>
+				</div>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Handle</th>
+							<th>Rating</th>
+						</tr>
+					</thead>
+					<!-- 此处的榜需要从数据库中导入数据，需要后端来处理 -->
+					<!-- 当前目的只是为了显示效果故直接写上数据 -->
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td><span style="font-weight:bold;color:black">t</span><span style="font-weight:bold;color:red">ourist</span></td>
+							<td>3496</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td><span style="font-weight:bold;color:black">P</span><span style="font-weight:bold;color:red">etr</span></td>
+							<td>3298</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td><span style="font-weight:bold;color:black">O</span><span style="font-weight:bold;color:red">O0OOO00</span></td>
+							<td>3294</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td><span style="font-weight:bold;color:black">U</span><span style="font-weight:bold;color:red">m_nik</span></td>
+							<td>3248</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td><span style="font-weight:bold;color:black">W</span><span style="font-weight:bold;color:red">4yneb0t</span></td>
+							<td>3218</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td><span style="font-weight:bold;color:black">S</span><span style="font-weight:bold;color:red">yloviaely</span></td>
+							<td>3168</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td><span style="font-weight:bold;color:black">i</span><span style="font-weight:bold;color:red">zrak</span></td>
+							<td>3109</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td><span style="font-weight:bold;color:black">a</span><span style="font-weight:bold;color:red">nta</span></td>
+							<td>3106</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td><span style="font-weight:bold;color:black">R</span><span style="font-weight:bold;color:red">adewoosh</span></td>
+							<td>3084</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td><span style="font-weight:bold;color:black">H</span><span style="font-weight:bold;color:red">YPERCUBELOVER</span></td>
+							<td>3071</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<!-- 这里空了一大片不知道要怎么搞。。放友情链接又太大了 -->
+			<div class=col-md-8>
+				<div class="page-header">
+					<h1>这片区域不知道要用来干嘛</h1>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="page-header">
+					<h1>Top Solved</h1>
+				</div>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Handle</th>
+							<th>Solved</th>
+						</tr>
+					</thead>
+					<!-- 此处的榜需要从数据库中导入数据，需要后端来处理 -->
+					<!-- 当前目的只是为了显示效果故直接写上数据 -->
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>vjudge3</td>
+							<td>3468</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>vjudge5</td>
+							<td>3464</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>vjudge1</td>
+							<td>3451</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>vjudge4</td>
+							<td>3445</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>vjudge2</td>
+							<td>3438</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td style="font-weight:bold;color:blue">Ali.Pi</td>
+							<td>3286</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td style="font-weight:bold;color:orange">guille</td>
+							<td>2947</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>130705009</td>
+							<td>2867</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td style="font-weight:bold;color:red">dreamoon</td>
+							<td>2765</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td style="font-weight:bold;color:red">uwi</td>
+							<td>2742</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="text-center">
+				<hr>
+				<p>Template for <a href="http://getbootstrap.com">Bootstrap</a>, by momoto, HunterYH, HuangShaofeng, and Caproner.</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

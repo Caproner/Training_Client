@@ -1,0 +1,44 @@
+.draw-star
+{
+	margin-top: 80px;
+}
+.draw-button
+{
+	text-align:	center;
+	padding:	10px;
+}
+.draw-show
+{
+	text-align:	center;
+	padding:	10px;
+	height:		300px;
+}
+.draw-unit
+{
+	margin: 			1px;
+	position: 			relative;
+	display: 			inline-block;
+	text-align: 		center;
+	height:				300px;
+	width:				80px;
+}
+.draw-rank6
+{
+	background-color:	#ffca2c;
+	color:				#ffffff;
+}
+.draw-rank5
+{
+	background-color:	#fff8a3;
+	color:				#948f55;
+}
+.draw-rank4
+{
+	background-color:	#aaace4;
+	color:				#ffffff;
+}
+.draw-rank3
+{
+	background-color:	#bfbfbf;
+	color:				#ffffff;
+}
